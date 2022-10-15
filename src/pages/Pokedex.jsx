@@ -36,8 +36,10 @@ console.log(pokemon)
       <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
       <div className='avatar'>
         <div className="trainerStyleOn">
-        <img src={trainerImgage} alt="" /><p>{userName}</p>
+        <img src={trainerImgage} alt="" />
+        
         </div>
+        <div className="avatarName"> <p>{userName}</p></div>
       </div>
       <main className="pokedeGrid1" >
       <div className="pokedeGrid">

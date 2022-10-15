@@ -2,14 +2,17 @@
 /* background-image: url(../Pokémon-Unite-Background-Pictures.png);
 background-size: cover;
 background-repeat: no-repeat; */
-
+cursor: url(../public/cursor1.png),auto;
 
 }
 .App{
     width: auto;
     height: auto;
 }
-
+.footerPoke{
+    background-color: aqua;
+    position: sticky;
+}
  @media (max-width: 600px) {
  body{
     background-image: url(../Pokémon-Unite-Background-Pictures.png);
@@ -18,10 +21,7 @@ background-repeat: no-repeat; */
     backdrop-filter: blur(10px);
     width: 100%;
     min-height: 100vh;
-    max-height: 100vh;
+    max-height: 100vh; 
  }
 }
-.avatar{
-    position: fixed;
-    background-color: aqua;
-}
+

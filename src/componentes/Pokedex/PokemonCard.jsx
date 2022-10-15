@@ -1,10 +1,12 @@
 import axios from 'axios'
 
 import React, { useEffect, useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const PokemonCard = ({url}) => {
 
 const [pokemon, setPokemon] = useState()
+const navigate = useNavigate()
 
 useEffect(() => {
   axios.get(url)
@@ -28,9 +30,12 @@ return classType
 }
 const pokeBG = bgclas(typesleng)
 console.log(bgclas(typesleng))
-
+const moveTo = () =>{
+  console.log('ola');
+  navigate(`/pokedex/${pokemon.id}`)
+}
   return (
-    <div className="principal">
+    <div onClick={moveTo} className="principal">
         <div className="bgcard">
             <div className= {pokeBG}>
                 <div className="pokeName">
@@ -43,7 +48,7 @@ console.log(bgclas(typesleng))
                     <div className="pokeInfo">
                       {
                         pokemon?.types.map(type => (
-                          <li>{type.type.name}</li>
+                          <li key={type.slot}>{type.type.name}</li>
                         ))
                       }
 
@@ -52,7 +57,7 @@ console.log(bgclas(typesleng))
                       <span>estadisticas</span>
                       {
                         pokemon?.stats.map(stat =>(
-                          <li>
+                          <li key={stat.name}>
                            <span>{stat.stat.name}</span> <span>{stat.base_stat}</span>
                            </li>
                         ))

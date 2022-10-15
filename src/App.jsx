@@ -21,6 +21,7 @@ function App() {
 
       </Routes>
       </div>
+      <footer className='footerPoke'>Intentar poner pokemon fav</footer>
     </div>
   )
 }

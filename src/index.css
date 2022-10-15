@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
 }
 body{
     /* background-image: url(../Pokémon-Unite-Background-Pictures.png);
@@ -11,4 +12,6 @@ body{
     backdrop-filter: blur(10px);
     background-attachment: fixed;
     width: 100%; */
+    cursor: url(../public/cursor1.png),auto;
+    
 }
