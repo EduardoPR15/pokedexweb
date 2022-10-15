@@ -11,7 +11,9 @@ cursor: url(../public/cursor1.png),auto;
 }
 .footerPoke{
     background-color: aqua;
-    position: sticky;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
  @media (max-width: 600px) {
  body{
