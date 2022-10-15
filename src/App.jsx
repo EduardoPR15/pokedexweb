@@ -1,4 +1,4 @@
-
+import { Navigate, Outlet } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
@@ -12,13 +12,13 @@ function App() {
     <div className="App">      
     <h2>the pokedex</h2>
     <Routes>
-      <Route path='/' element={<Home/>}>
-          <Route element={<ProtectedRoutes/>} />
-          <Route path='/pokedex' element={<Pokedex/>} />
-          <Route path='/pokedex/:id' element={<PokedexID/>} />
-      </Route>    
+      <Route path='/' element={<Home/>}/>
+          <Route element={<ProtectedRoutes/>}>
+            <Route path='/pokedex' element={<Pokedex/>} />
+            <Route path='/pokedex/:id' element={<PokedexID/>} />
+          </Route>    
 
-    </Routes>
+      </Routes>
     </div>
   )
 }
