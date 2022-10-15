@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Pokedex.css'
+import PokemonCard from '../componentes/Pokedex/PokemonCard'
 
 const Pokedex = () => {
   const userStyle = useSelector(state => state.userStyle)
@@ -9,10 +10,18 @@ const Pokedex = () => {
 const [pokemon,setpokemon]= useState()
 const userName = useSelector(state => state.userName)
 const trainerImgage = `/Trainers/${userStyle}.png`
+
+const limit4 = 4
+const limit8 = 8
+const limit12 = 12
+const limit16 =16
+const limit20 = 20
+
+
 useEffect(() => {
-const URL = 'https://pokeapi.co/api/v2/pokemon?limit=100&offset=0'
+const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limit20}&offset=0`
   axios.get(URL)
-  .then(res => setpokemon(res.data.reult))
+  .then(res => setpokemon(res.data.results))
   .catch(err => console.log(err))
 }, [])
 
@@ -30,8 +39,20 @@ console.log(pokemon)
         <img src={trainerImgage} alt="" /><p>{userName}</p>
         </div>
       </div>
-      <div className="pokedeGrid"><h1>aqui van los pokemon</h1></div>
-
+      <main className="pokedeGrid1" >
+      <div className="pokedeGrid">
+        <div className="pokemonCard">
+          {
+            pokemon?.map(pokemonSingular => (
+              <PokemonCard 
+              key={pokemonSingular.url} 
+              url={pokemonSingular.url}
+              />
+            ))
+          }
+          </div>
+        </div>
+      </main>
     </div>
   )
 }

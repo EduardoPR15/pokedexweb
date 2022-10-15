@@ -3,3 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    /* background-image: url(../Pokémon-Unite-Background-Pictures.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    background-attachment: fixed;
+    width: 100%; */
+}

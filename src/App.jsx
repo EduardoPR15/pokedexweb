@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">      
     <h2>the pokedex</h2>
+    <div className="container">
     <Routes>
       <Route path='/' element={<Home/>}/>
           <Route element={<ProtectedRoutes/>}>
@@ -19,6 +20,7 @@ function App() {
           </Route>    
 
       </Routes>
+      </div>
     </div>
   )
 }
