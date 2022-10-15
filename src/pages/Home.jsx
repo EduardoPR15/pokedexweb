@@ -17,13 +17,19 @@ navigate('/pokedex')
 
   return (
     <div>
+      <div className="trainergender">
+        <h1>que eres</h1>
+        <h2>entrenador</h2> <h2>entrenadora</h2>
+        <div className="trainerFimgs"><h1>elige tu estilo</h1><h2>imagenes de entrenadoras</h2></div>
+        <div className="trainerMimg"><h1>elige tu estilo</h1><h2>imagenes de entrenadores</h2></div>
+      </div>
             <h1>POKEDEX</h1>
             <h2>Hola ingresa tu nombte</h2>
             <form onSubmit={handleClickHome} >
             <input id='name' type="text" />
             <button>play</button>
             </form>
-    </div>
+    </div> 
 
   )
 }
