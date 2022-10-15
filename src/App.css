@@ -1,3 +1,18 @@
 body{
     cursor: url(../cursor1.png), auto;
+    background-image: url(../public/Pokémon-Unite-Background-Pictures.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: fixed;
+    height:99vh;
+    width: auto;
+    backdrop-filter: blur(10px);
+    
+}
+@media (max-width: 400px) {
+ body{
+    height: 100%;
+ }
+    
 }

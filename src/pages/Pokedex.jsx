@@ -20,19 +20,17 @@ console.log(pokemon)
 
 
   return (
-    <div>
+    <div className='PokedexContainer'>
       <article> 
       <h1>pokedex nacional de la generacion 1 hasta la 8</h1>
       <h2>y algunos conocidos de la 9na generacion</h2>
       <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
-     
       <div className='avatar'>
-        
         <div className="trainerStyleOn">
         <img src={trainerImgage} alt="" /><p>{userName}</p>
         </div>
-
       </div>
+      <div className="pokedeGrid"><h1>aqui van los pokemon</h1></div>
 
     </div>
   )
