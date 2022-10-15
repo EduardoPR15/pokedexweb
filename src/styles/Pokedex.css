@@ -31,11 +31,13 @@ height: 150px;
     grid-column-gap: 50px ;
     grid-row-gap: 50px;
     overflow: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
     
 }  
 .principal{
     width: 150px;
-    height: 200px;
+    height: auto;
 
 }
 .pokeIMG{

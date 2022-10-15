@@ -49,6 +49,13 @@ console.log(bgclas(typesleng))
                     </div>
                     <div className="pokeStats">
                       <span>estadisticas</span>
+                      {
+                        pokemon?.stats.map(stat =>(
+                          <li>
+                           <span>{stat.stat.name}</span> <span>{stat.base_stat}</span>
+                           </li>
+                        ))
+                      }
 
                     </div>
                     .
