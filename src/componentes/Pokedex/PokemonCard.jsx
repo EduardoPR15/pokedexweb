@@ -14,21 +14,32 @@ useEffect(() => {
 }, [])
 
 console.log(pokemon)
-
+const typesleng = pokemon?.types.length
+console.log(typesleng);
 
 const classType = `bg-${pokemon?.types[0].type.name}`
+function bgclas (length){
+  if (typesleng === 2) {
+  let classType2 = `-${pokemon?.types[1].type.name}`
+  let classTyp3 = classType + classType2
+  return classTyp3
+}else
+return classType
+}
+const pokeBG = bgclas(typesleng)
+console.log(bgclas(typesleng))
 
   return (
     <div className="principal">
         <div className="bgcard">
-            <div className={classType}>
+            <div className={pokeBG}>
                 <div className="pokeName">
                   <span>{pokemon?.name}</span>
                     <div className="pokeIMG">
                       <img src={pokemon?.sprites.other.home.front_default} alt="" />
                     </div>
                     <div className="pokeInfo">
-                      <span>tipo {pokemon?.types[0].type.name}</span>
+                      <span>tipo </span>
                       {
                         pokemon?.types.map(type => (
                           <li>{type.type.name}</li>

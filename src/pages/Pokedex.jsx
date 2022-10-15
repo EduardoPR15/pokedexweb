@@ -16,10 +16,10 @@ const limit8 = 8
 const limit12 = 12
 const limit16 =16
 const limit20 = 20
-
+const limitAll =100
 
 useEffect(() => {
-const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limit20}&offset=0`
+const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limitAll}&offset=0`
   axios.get(URL)
   .then(res => setpokemon(res.data.results))
   .catch(err => console.log(err))

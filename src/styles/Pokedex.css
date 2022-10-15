@@ -63,7 +63,7 @@ background: radial-gradient(circle, rgba(221,204,170,1) 53%, rgba(255,247,230,1)
 .bg-grass{
 background-color:#99FF66 ;
 }
-.bg-psychc{
+.bg-psychic{
     background-color: #FFB5C5;
 }
 .bg-fire{
@@ -72,14 +72,14 @@ background-color:#99FF66 ;
 .bg-electric{
     background-color: #FFD700;
 }
-.bg-fight{
+.bg-fighting{
     background-color: 	#FF6A6A;
 }
 .bg-normal-flying{
     background: rgb(221,204,170);
 background: radial-gradient(circle, rgba(221,204,170,1) 0%, rgba(186,170,255,1) 100%);
 }
-.bg-fairy{
+.bg-fairy-fairy{
     background-color: 	#FFB0FF;
 }
 .bg-bug{
@@ -104,7 +104,7 @@ background: radial-gradient(circle, rgba(153,204,51,1) 0%, rgba(186,170,255,1) 1
 .bg-ghost{
     background-color: #778899;
 }
-.bg-grass-poisson{
+.bg-grass-poison{
     background: rgb(153,255,102);
 background: radial-gradient(circle, rgba(153,255,102,1) 0%, rgba(204,136,187,1) 100%);
 }
