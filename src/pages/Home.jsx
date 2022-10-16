@@ -5,13 +5,17 @@ import { useNavigate } from 'react-router-dom'
 import { setUserName } from '../store/slices/userName.slice'
 import { setUserGender } from '../store/slices/userGender.slice';
 import { setUserStyle } from '../store/slices/userStyle.slice';
+import getRandom from '../customHooks/getRandom'
 
 const Home = () => {
 const userGender = useSelector(state => state.userGender)
 const userStyle = useSelector(state => state.userStyle)
 const dispatch = useDispatch()
 const navigate = useNavigate()
+const randomProfesor = getRandom()
+console.log(randomProfesor);
 const handleClickHome = e =>{
+  
   e.preventDefault()
   dispatch (setUserName(e.target.name.value.trim()))
   console.log(e.target.name.value)
@@ -34,6 +38,7 @@ console.log(userStyle);
     <div>
       <div className="trainergender">
         <h1>que eres</h1>
+        <span> imagen del profesor numero {randomProfesor}</span>
         <div className="trainerMale">
           <div className="maleImg"></div>
             <h2>entrenador <button onClick={selectMale}>click</button></h2>

@@ -29,6 +29,9 @@ console.log(pokemonID)
         <img src={trainerImgage} alt="" />
         
         </div>
+        <div className="IDpokeSprite">
+          <img src={pokemonID?.sprites.front_default} alt="" />
+        </div>
         <div className="avatarName"> <p>{userName}</p></div>
       </div>
 
