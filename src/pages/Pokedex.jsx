@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Pokedex.css'
 import PokemonCard from '../componentes/Pokedex/PokemonCard'
+import InputSearch from '../componentes/Pokedex/InputSearch'
 
 const Pokedex = () => {
   const userStyle = useSelector(state => state.userStyle)
@@ -16,7 +17,7 @@ const limit8 = 8
 const limit12 = 12
 const limit16 =16
 const limit20 = 20
-const limitAll =100
+const limitAll =2000
 
 useEffect(() => {
 const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limitAll}&offset=0`
@@ -25,7 +26,7 @@ const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limitAll}&offset=0`
   .catch(err => console.log(err))
 }, [])
 
-console.log(pokemon)
+//console.log(pokemon)
 
 
   return (
@@ -33,6 +34,7 @@ console.log(pokemon)
       <article> 
       <h1>pokedex nacional de la generacion 1 hasta la 8</h1>
       <h2>y algunos conocidos de la 9na generacion</h2>
+      <InputSearch/>
       <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
       <div className='avatar'>
         <div className="trainerStyleOn">

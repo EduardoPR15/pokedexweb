@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import InputSearch from '../componentes/Pokedex/InputSearch'
+import PokeError404 from '../componentes/PokedexID/PokeError404'
 
 const PokedexID = () => {
   const userStyle = useSelector(state => state.userStyle)
@@ -11,18 +13,28 @@ const PokedexID = () => {
 const {id}  = useParams()
 
 const [pokemonID, setPokemonID] = useState()
+const [pokeError, setPokeError] = useState(false)
 
 useEffect(() => {
   const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`
   axios.get(URL)
     .then(res => setPokemonID(res.data))
-    .catch(err => console.log(err))
+    .catch(err => {
+      console.log(err)
+      setPokeError(true)
+    })
 
 }, [])
 
-console.log(pokemonID)
-  return (
+//console.log(pokemonID)
+  
+if(pokeError){
+  return <PokeError404/>
+}
+
+return (
     <div>
+      <InputSearch/>
       <h2> nombre del pokemon</h2>
       <div className='avatar'>
         <div className="trainerStyleOn">

@@ -15,9 +15,9 @@ useEffect(() => {
 
 }, [])
 
-console.log(pokemon)
+//console.log(pokemon)
 const typesleng = pokemon?.types.length
-console.log(typesleng);
+//console.log(typesleng);
 
 const classType = `bg-${pokemon?.types[0].type.name}`
 function bgclas (length){
@@ -27,11 +27,12 @@ function bgclas (length){
   return classTyp3
 }else
 return classType
+
 }
 const pokeBG = bgclas(typesleng)
-console.log(bgclas(typesleng))
+//console.log(bgclas(typesleng))
 const moveTo = () =>{
-  console.log('ola');
+  //console.log('ola');
   navigate(`/pokedex/${pokemon.id}`)
 }
   return (
