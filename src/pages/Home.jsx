@@ -101,8 +101,6 @@ console.log(userStyle);
             <input id='name' type="text" />
             <button>play</button>
             </form>
-            
-            <footer><h2>ola q ase</h2></footer>
     </div> 
 
   )
