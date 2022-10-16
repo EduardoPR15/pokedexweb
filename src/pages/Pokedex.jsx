@@ -4,13 +4,16 @@ import { useSelector } from 'react-redux'
 import '../styles/Pokedex.css'
 import PokemonCard from '../componentes/Pokedex/PokemonCard'
 import InputSearch from '../componentes/Pokedex/InputSearch'
+import SelectType from '../componentes/Pokedex/SelectType'
 
 const Pokedex = () => {
   const userStyle = useSelector(state => state.userStyle)
   const userGender = useSelector(state => state.userGender)
 const [pokemon,setpokemon]= useState()
+const [URLtype, setURLtype] = useState('All')
 const userName = useSelector(state => state.userName)
 const trainerImgage = `/Trainers/${userStyle}.png`
+
 
 const limit4 = 4
 const limit8 = 8
@@ -20,21 +23,34 @@ const limit20 = 20
 const limitAll =2000
 
 useEffect(() => {
-const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limitAll}&offset=0`
+
+if(URLtype !== 'All'){
+axios.get(URLtype)
+.then(res => {const result = res.data.pokemon.map(e => e.pokemon)
+  console.log(result)
+  setpokemon(result)
+})
+.catch(err => console.log(err))
+}
+
+  else {
+    const URL = `https://pokeapi.co/api/v2/pokemon?limit=${limitAll}&offset=0`
   axios.get(URL)
   .then(res => setpokemon(res.data.results))
   .catch(err => console.log(err))
-}, [])
+}
+}, [URLtype])
 
 //console.log(pokemon)
-
+console.log(URLtype)
 
   return (
     <div className='PokedexContainer'>
       <article> 
       <h1>pokedex nacional de la generacion 1 hasta la 8</h1>
       <h2>y algunos conocidos de la 9na generacion</h2>
-      <InputSearch/>
+      <InputSearch />
+      <SelectType setURLtype={setURLtype}/>
       <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
       <div className='avatar'>
         <div className="trainerStyleOn">
