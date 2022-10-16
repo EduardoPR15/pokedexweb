@@ -26,7 +26,7 @@ useEffect(() => {
 
 }, [])
 
-//console.log(pokemonID)
+console.log(pokemonID)
   
 if(pokeError){
   return <PokeError404/>
@@ -51,7 +51,7 @@ return (
         <div className="IDeffect">
           <div className="IDbg">
             <div className="IDpokeName">
-              <h3>ID {id} {pokemonID?.name} </h3>
+              <h3>#{pokemonID?.id} {pokemonID?.name} </h3>
               <div className="IDpokeIMG">
                   <img src={pokemonID?.sprites.other["official-artwork"].front_default} alt="" />
               </div>
