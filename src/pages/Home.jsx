@@ -14,6 +14,7 @@ const dispatch = useDispatch()
 const navigate = useNavigate()
 const randomProfesor = getRandom()
 console.log(randomProfesor);
+const randomProfImg = `./Profesor/${randomProfesor}.png`
 const handleClickHome = e =>{
   
   e.preventDefault()
@@ -34,11 +35,51 @@ const selectedStyle = e =>{
 }
 console.log(userGender)
 console.log(userStyle);
+function profesorPokemon(prof) {
+if (randomProfesor === 1) {
+  let profData = ['Oak','Profesor']
+  return profData
+}
+if (randomProfesor === 2) {
+  let profData = ['Elm','Profesor']
+  return profData
+}
+if (randomProfesor === 3) {
+  let profData = ['Abedul','Profesor']
+  return profData
+}
+if (randomProfesor === 4) {
+  let profData = ['Serbal','Profesor']
+  return profData
+}
+if (randomProfesor === 5) {
+  let profData = ['Encina','Profesora']
+  return profData
+}
+if (randomProfesor === 6) {
+  let profData = ['Cipres','Profesor']
+  return profData
+}
+if (randomProfesor === 7) {
+  let profData = ['Kukui','Profesor']
+  return profData
+}
+if (randomProfesor === 8) {
+  let profData = ['Magnolia','Profesora']
+  return profData
+}
+
+}
+const profdatas =[(profesorPokemon(randomProfesor))]
+console.log(profdatas[0][0]);
   return (
     <div>
       <div className="trainergender">
-        <h1>que eres</h1>
-        <span> imagen del profesor numero {randomProfesor}</span>
+        <p>Hola!, esta es la pokedex nacional</p>
+        <p>Me llamo {profdatas[0][0]} y soy {profdatas[0][1]} Profesor Pokemon</p>
+        <div className="profesor">
+          <img src={randomProfImg} alt="" />
+        </div>
         <div className="trainerMale">
           <div className="maleImg"></div>
             <h2>entrenador <button onClick={selectMale}>click</button></h2>

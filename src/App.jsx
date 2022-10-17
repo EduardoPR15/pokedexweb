@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">      
-    <h2>the pokedex</h2>
+    <div className="pokeTitle"><img src="/Pokedex.png" alt="" /></div>
     <div className="container">
     <Routes>
       <Route path='/' element={<Home/>}/>

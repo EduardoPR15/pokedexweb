@@ -1,21 +1,40 @@
  body{
-/* background-image: url(../Pokémon-Unite-Background-Pictures.png);
+background-image: url(../Pokémon-Unite-Background-Pictures.png);
 background-size: cover;
-background-repeat: no-repeat; */
+background-repeat: no-repeat;
 cursor: url(../public/cursor1.png),auto;
-
+min-height: 100vh;
+margin-bottom: 0;
 }
 .App{
     width: auto;
-    height: auto;
+    height: 100%; 
+}
+.pokeTitle{
+    width: 100%;
+
+}
+.pokeTitle img{
+    width: 100%;
+
+}
+.profesor{
+    margin: auto;
+    width: 120px;
+    height: 200px;
+}
+.profesor img{
+    width: 100%;
+    height: 100%;
+
 }
 .footerPoke{
     background-color: aqua;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 0; 
 }
- @media (max-width: 600px) {
+ /* @media (max-width: 600px) {
  body{
     background-image: url(../Pokémon-Unite-Background-Pictures.png);
     background-size: auto;
@@ -25,5 +44,5 @@ cursor: url(../public/cursor1.png),auto;
     min-height: 100vh;
     max-height: 100vh; 
  }
-}
+} */
 
