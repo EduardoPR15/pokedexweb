@@ -61,7 +61,7 @@ console.log(URLtype)
       </div>
       <main className="pokedeGrid1" >
       <div className="pokedeGrid">
-        <div className="pokemonCard">
+        <div className="pokemonCard  ">
           {
             pokemon?.map(pokemonSingular => (
               <PokemonCard 

@@ -49,18 +49,27 @@ const moveTo = () =>{
                     <div className="pokeInfo">
                       {
                         pokemon?.types.map(type => (
+                          <div className="divname">
                           <li key={type.slot}>{type.type.name}</li>
+                          </div>
                         ))
                       }
 
                     </div>
                     <div className="pokeStats">
-                      <span>estadisticas</span>
+                      
                       {
                         pokemon?.stats.map(stat =>(
-                          <li key={stat.name}>
-                           <span>{stat.stat.name}</span> <span>{stat.base_stat}</span>
-                           </li>
+                              <div className="divgrid">
+                              <div className="statname">
+                           <span>{stat.stat.name}</span>
+                            </div>
+                            <div className="statevalue">
+                           <span>{stat.base_stat}</span>
+                           </div>
+                           </div>
+                          
+                           
                         ))
                       }
 

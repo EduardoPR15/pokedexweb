@@ -74,23 +74,27 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
   border-radius: 10px;
   }
 .principal{
-    width: 150px;
+    width: auto;
     height: auto;
+    border: rgb(223, 189, 115) 10px solid;
+    border-radius: 10px;
 
 }
 .pokeIMG{
     margin: auto;
     width: 100px;
     height: 100px;
-
+    padding-bottom: 20px;
 }
 .pokeIMG img{
     width: 100%;
     height: 100%;
+    
 }
 .pokeName{
    text-align: center;
    text-transform: capitalize;
+   
 } 
 .pokeInfo{
     width: 100%;
@@ -99,7 +103,22 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
     justify-content: center;
     gap: 10px ;
     text-transform: capitalize;
-
+    background-color:rgb(223, 189, 115);
+   
+}
+.pokeStats{
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 3fr));
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-auto-flow: row; */
+    
+}
+.pokeStats li{
+    list-style: none;
 }
 .pokeInfo li{
     list-style: none;
@@ -107,7 +126,7 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
 /* tipos de pokemon */
 .tipeContainer{
     margin: auto;
-    width: 150px;
+    width: 100%;
     height: 120px;
 }
 .bg-normal{
@@ -125,7 +144,8 @@ background-color:#99FF66 ;
     background-color: #FFB5C5;
 }
 .bg-fire{
-    background-color:#FF7F00 ;
+    background: rgb(223,28,28);
+background: radial-gradient(circle, rgba(223,28,28,0.9051995798319328) 0%, rgba(213,140,62,0.7651435574229692) 100%);
 }
 .bg-electric{
     background-color: #FFD700;
@@ -163,8 +183,10 @@ background: radial-gradient(circle, rgba(153,204,51,1) 0%, rgba(186,170,255,1) 1
     background-color: #778899;
 }
 .bg-grass-poison{
-    background: rgb(153,255,102);
-background: radial-gradient(circle, rgba(153,255,102,1) 0%, rgba(204,136,187,1) 100%);
+    background: rgb(128,61,182);
+background: linear-gradient(0deg, rgba(128,61,182,0.8547794117647058) 0%, rgba(107,247,102,0.896796218487395) 75%);
+border: 2px;
+border-color: red solid 2px;
 }
 .bg-dragon{
     background-color: 	#AB82FF;
@@ -177,7 +199,8 @@ background: radial-gradient(circle, rgba(153,255,102,1) 0%, rgba(204,136,187,1) 
 background: linear-gradient(90deg, rgba(153,204,51,1) 0%, rgba(204,136,187,1) 100%);
 }
 .bg-rock-water{
-    
+    background: rgb(82,172,156);
+background: radial-gradient(circle, rgba(82,172,156,0.9051995798319328) 0%, rgba(213,140,62,0.7651435574229692) 100%);
 }
 .bg-steel{
     
@@ -237,7 +260,8 @@ background: linear-gradient(90deg, rgba(153,204,51,1) 0%, rgba(204,136,187,1) 10
     
 }
 .bg-fire-flying{
-    
+    background: rgb(223,28,28);
+    background: radial-gradient(circle, rgba(223,28,28,0.9051995798319328) 0%, rgba(105,186,183,0.8883928571428571) 100%);
 }
 .bg-water-poison{
     
