@@ -15,7 +15,7 @@ useEffect(() => {
 
 }, [])
 
-//console.log(pokemon)
+//console.log(pokemon?.stats[0].base_stat)
 const typesleng = pokemon?.types.length
 //console.log(typesleng);
 
@@ -57,7 +57,13 @@ const moveTo = () =>{
 
                     </div>
                     <div className="pokeStats">
-                      
+                      <span className='HPstat'>{pokemon?.stats[0].stat.name}</span> <span className='HPvalue'>{pokemon?.stats[0].base_stat}</span>
+                      <span className='ATstat'>{pokemon?.stats[1].stat.name}</span> <span className='ATvalue'>{pokemon?.stats[1].base_stat}</span>
+                      <span className='DFstat'>{pokemon?.stats[2].stat.name}</span> <span className='DFvalue'>{pokemon?.stats[2].base_stat}</span>
+                      <span className='SPstat'>{pokemon?.stats[5].stat.name}</span> <span className='SPvalue'>{pokemon?.stats[5].base_stat}</span>
+                      <span className='SATstat'>{pokemon?.stats[3].stat.name}</span> <span className='SATvalue'>{pokemon?.stats[3].base_stat}</span>
+                      <span className='SDFstat'>{pokemon?.stats[4].stat.name}</span> <span className='SDFvalue'>{pokemon?.stats[4].base_stat}</span>
+                      {/* <p>{pokemon?.stats[0]}</p>
                       {
                         pokemon?.stats.map(stat =>(
                               <div className="divgrid">
@@ -71,7 +77,7 @@ const moveTo = () =>{
                           
                            
                         ))
-                      }
+                      } */}
 
                     </div>
                

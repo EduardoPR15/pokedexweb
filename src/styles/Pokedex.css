@@ -74,8 +74,8 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
   border-radius: 10px;
   }
 .principal{
-    width: auto;
-    height: auto;
+    width: 140px;
+    height: 300px;
     border: rgb(223, 189, 115) 10px solid;
     border-radius: 10px;
 
@@ -109,13 +109,55 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
 .pokeStats{
     background-color:white;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(60px, 3fr));
+    text-align: center;
     /* grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     grid-auto-flow: row; */
     
+}
+.HPstat{
+background-color: #99CC33;
+}
+.HPvalue{
+    background-color: #A9A9A9;
+}
+.ATstat{
+    background-color: #778899;
+}
+.ATvalue{
+    background-color: red
+}
+.DFstat{
+    background-color: #AB82FF;
+}
+.DFvalue{
+    background-color: #CC88BB;
+}
+.SPstat{
+    background-color: #ADD8E6;
+}
+.SPvalue{
+    background-color: aqua;
+}
+.SATstat{
+    background-color: #99CC33;
+    align-items: center;
+}
+.SATvalue{
+    background-color: blue;
+    align-items: center;
+    margin: auto;
+}
+.SDFstat{
+    margin: auto;
+background-color: #DEB887;
+}
+.SDFvalue{
+    margin: auto;
+    background-color: beige
 }
 .pokeStats li{
     list-style: none;
@@ -130,35 +172,40 @@ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.459);
     height: 120px;
 }
 .bg-normal{
-    background: rgb(221,204,170);
-background: radial-gradient(circle, rgba(221,204,170,1) 53%, rgba(255,247,230,1) 100%);
+    background: rgb(190,190,190);
+    background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(204,178,157,1) 60%);
 }
 .bg-water{
-    background: rgb(176,226,255);
-    background: radial-gradient(circle, rgba(176,226,255,1) 0%, rgba(41,204,254,1) 100%);
+    background: rgb(134,182,174);
+background: linear-gradient(0deg, rgba(134,182,174,1) 0%, rgba(43,136,222,1) 60%);
 }
 .bg-grass{
-background-color:#99FF66 ;
+    background: rgb(128,195,129);
+background: linear-gradient(0deg, rgba(128,195,129,1) 0%, rgba(83,255,82,1) 60%);
 }
 .bg-psychic{
-    background-color: #FFB5C5;
+    background: rgb(245,113,140);
+background: linear-gradient(0deg, rgba(245,113,140,1) 0%, rgba(191,21,124,1) 60%);
 }
 .bg-fire{
-    background: rgb(223,28,28);
-background: radial-gradient(circle, rgba(223,28,28,0.9051995798319328) 0%, rgba(213,140,62,0.7651435574229692) 100%);
+    background: rgb(255,214,48);
+background: linear-gradient(0deg, rgba(255,214,48,1) 0%, rgba(198,17,11,1) 60%);
 }
 .bg-electric{
-    background-color: #FFD700;
+    background: rgb(238,229,153);
+    background: linear-gradient(0deg, rgba(238,229,153,1) 0%, rgba(251,232,0,1) 60%);
 }
 .bg-fighting{
-    background-color: 	#FF6A6A;
+    background: rgb(235,168,127);
+background: linear-gradient(0deg, rgba(235,168,127,1) 0%, rgba(190,80,7,1) 60%);
 }
 .bg-normal-flying{
     background: rgb(221,204,170);
 background: radial-gradient(circle, rgba(221,204,170,1) 0%, rgba(186,170,255,1) 100%);
 }
-.bg-fairy-fairy{
-    background-color: 	#FFB0FF;
+.bg-fairy{
+    background: rgb(235,177,242);
+background: linear-gradient(0deg, rgba(235,177,242,1) 0%, rgba(251,113,252,1) 60%);
 }
 .bg-bug{
     background-color: #99CC33;
@@ -199,8 +246,8 @@ border-color: red solid 2px;
 background: linear-gradient(90deg, rgba(153,204,51,1) 0%, rgba(204,136,187,1) 100%);
 }
 .bg-rock-water{
-    background: rgb(82,172,156);
-background: radial-gradient(circle, rgba(82,172,156,0.9051995798319328) 0%, rgba(213,140,62,0.7651435574229692) 100%);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(176,143,72,1) 60%);
 }
 .bg-steel{
     
