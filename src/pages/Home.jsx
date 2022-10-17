@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/Home.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -13,14 +13,20 @@ const userStyle = useSelector(state => state.userStyle)
 const dispatch = useDispatch()
 const navigate = useNavigate()
 const randomProfesor = getRandom()
-console.log(randomProfesor);
-const randomProfImg = `./Profesor/${randomProfesor}.png`
+//console.log(randomProfesor);
+//let profdatas = ''
+const [profe, setprofe] = useState(1)
+useEffect(() => {
+  setprofe(randomProfesor)
+}, [])
+console.log(profe);
+const randomProfImg = `./Profesor/${profe}.png`
 const handleClickHome = e =>{
   
   e.preventDefault()
   dispatch (setUserName(e.target.name.value.trim()))
   console.log(e.target.name.value)
-  console.log('play');
+  //console.log('play');
   navigate('/pokedex')
 
 }
@@ -33,44 +39,45 @@ const selectFemale = () =>{
 const selectedStyle = e =>{
   dispatch(setUserStyle(e.target.id))
 }
-console.log(userGender)
-console.log(userStyle);
-function profesorPokemon(prof) {
-if (randomProfesor === 1) {
+//console.log(userGender)
+//console.log(userStyle);
+function profesorPokemon(profe) {
+if (profe === 1) {
   let profData = ['Oak','Profesor']
   return profData
 }
-if (randomProfesor === 2) {
+if (profe === 2) {
   let profData = ['Elm','Profesor']
   return profData
 }
-if (randomProfesor === 3) {
+if (profe === 3) {
   let profData = ['Abedul','Profesor']
   return profData
 }
-if (randomProfesor === 4) {
+if (profe === 4) {
   let profData = ['Serbal','Profesor']
   return profData
 }
-if (randomProfesor === 5) {
+if (profe === 5) {
   let profData = ['Encina','Profesora']
   return profData
 }
-if (randomProfesor === 6) {
+if (profe === 6) {
   let profData = ['Cipres','Profesor']
   return profData
 }
-if (randomProfesor === 7) {
+if (profe === 7) {
   let profData = ['Kukui','Profesor']
   return profData
 }
-if (randomProfesor === 8) {
+if (profe === 8) {
   let profData = ['Magnolia','Profesora']
   return profData
 }
 
 }
-const profdatas =[(profesorPokemon(randomProfesor))]
+
+const profdatas =[(profesorPokemon(profe))]
 console.log(profdatas[0][0]);
   return (
     <div>

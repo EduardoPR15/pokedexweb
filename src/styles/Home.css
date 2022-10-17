@@ -8,9 +8,12 @@
     grid-row-gap: 10px;
     
 }
-.cardTrainer{
+.cardTrainer {
     width: auto;
     height: 250px;
+}
+.cardTrainer:active{
+    background-color: black;
 }
 .femaleIMG{
     width: 100px;
