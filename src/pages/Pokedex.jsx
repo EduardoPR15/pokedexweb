@@ -56,9 +56,11 @@ console.log(URLtype)
       <article> 
       <h1>pokedex nacional de la generacion 1 hasta la 8</h1>
       <h2>y algunos conocidos de la 9na generacion</h2>
+      <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
       <InputSearch />
       <SelectType setURLtype={setURLtype}/>
-      <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
+      
+      <Pagination page={page} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
       <div className='avatar'>
         <div className="trainerStyleOn">
         <img src={trainerImgage} alt="" />
@@ -80,7 +82,7 @@ console.log(URLtype)
           </div>
         </div>
       </main>
-      <Pagination page={page} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
+      
     </div>
   )
 }

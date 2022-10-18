@@ -15,10 +15,10 @@ navigate(`/pokedex/${e.target.search.value.trim().toLowerCase()}`)
 
 
   return (
-    <div>
+    <div className='searchDiv'>
         <form onSubmit={submit}>
             <input id='search' type="text" />
-            <button>Search</button>
+            <button className='btnicon'>.</button>
         </form>
     </div>
   )

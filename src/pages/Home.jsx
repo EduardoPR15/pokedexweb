@@ -158,8 +158,8 @@ console.log(profdatas[0][0]);
             {/* <img src="/rotom2.png" alt="" /> */}
             <form onSubmit={handleClickHome}>
             <input id='name' type="text" />
-             <div className="btnrotom"></div> 
-            {/* <button><img src="/rotom1.png" alt="" /></button> */}
+             {/* <div className="btnrotom"><img src="/rotom1.png" alt="" /></div>  */}
+            <button>play</button>
             </form>
       </div>
     </div> 

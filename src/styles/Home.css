@@ -5,6 +5,9 @@
 body{
     font-family: NintendoDS;
 }
+button:hover{
+    cursor: url(../cursor2.png),auto;
+}
 .trainergender{
     font-family: NintendoDS;
  
@@ -110,11 +113,15 @@ button{
     overflow: hidden;
     text-align: center;
 }
+button:hover{
+    cursor: url(../cursor3.png),auto;
+}
 .btndiv{
     text-align: center;
 }
 .btnTrainer:hover{
     transition: background-color 200ms;
+    cursor: url(../cursor3.png),auto;
 }
 
 .btnTrainer:hover p{

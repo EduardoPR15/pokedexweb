@@ -5,25 +5,26 @@ const Pagination = ({page, pokemonLength}) => {
     const pagesBLock = 8
     const currentBlock = Math.ceil(page / pagesBLock)
     const blockLength = Math.ceil(pokemonLength / pagesBLock) 
-const initialPage = (currentBlock -1) * pagesBLock + 1
+    
+    const arrPages = []
+const initialPage = (currentBlock - 1) * pagesBLock + 1
 
 const limitPage = blockLength === currentBlock ? pokemonLength : currentBlock * pagesBLock
-    const arrPages = []
-    for (let i = initialPage; i < limitPage; i++) {
+    for (let i = initialPage; i <= limitPage; i++) {
         arrPages.push(i)
-        
     }
+
     return (
-    <div className='PagesContainer'>
-        <div className="backtPage">atras<i class='bx bxs-chevrons-left'></i></div>
-        <ul>
+    <div className='Pagination'>
+        <div className="backPage">atras<i class='bx bxs-chevrons-left'></i></div>
+        <ul className='pageContainer'>
             {
                 arrPages.map(e => (
-                    <li key={e}>{e}</li>
+                    <li className='paginationPage' key={e}>{e}</li>
                 ))
             }
         </ul>
-        <div className="nestPage">adelante<i class='bx bxs-chevrons-right'></i></div>
+        <div className="nextPage">adelante<i class='bx bxs-chevrons-right'></i></div>
     </div>
   )
 }

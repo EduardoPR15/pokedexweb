@@ -2,6 +2,8 @@
 background-image: url(../Pokémon-Unite-Background-Pictures.png);
 background-size: cover;
 background-repeat: no-repeat;
+background-position: center;
+backdrop-filter: blur(10px);
 cursor: url(../public/cursor1.png),auto;
 min-height: 100vh;
 margin-bottom: 0;
@@ -67,7 +69,7 @@ margin-bottom: 0;
 }
 button{
     width: 100px;
-    background:none;
+    
 }
 button img{
     position:absolute;
@@ -84,12 +86,48 @@ button img{
     background-color: #6cd3ff;
     height: 40px;
 }
+.input[type="submit"]:hover{
+    cursor: url(../cursor2.png),auto;
+}
+input:focus{
+    cursor: url(../cursor3.png),auto;
+}
 .footerPoke{
     background-color: aqua;
     position: absolute;
     width: 100%;
     bottom: 0; 
 }
+/*  */
+.Pagination{
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    
+}
+.pageContainer{
+    display: flex;
+    gap: 1px;
+    list-style: none;
+}
+.paginationPage{
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.paginationActive{
+    background-color: red;
+}
+
  /* @media (max-width: 600px) {
  body{
     background-image: url(../Pokémon-Unite-Background-Pictures.png);
