@@ -82,18 +82,22 @@ console.log(profdatas[0][0]);
   return (
     <div>
       <div className="trainergender">
-        <p>Hola!, esta es la pokedex nacional</p>
-        <p>Me llamo {profdatas[0][0]} y soy {profdatas[0][1]} Profesor Pokemon</p>
         <div className="profesor">
           <img src={randomProfImg} alt="" />
         </div>
+        <div className="textbox1">
+        <p>Hola!, esta es la pokedex nacional</p>
+        <p>Me llamo {profdatas[0][0]} y soy {profdatas[0][1]} Pokemon</p>
+        
         <div className="trainerMale">
           <div className="maleImg"></div>
-            <h2>entrenador <button onClick={selectMale}>click</button></h2>
+          <div className="btnTrainer"><span>Entrenador </span><p><i class='bx bx-left-arrow'></i></p></div>
+            <button onClick={selectMale}>entrenador <p> flecha </p> </button>
         </div>
         <div className="trainerFemale">
           <div className="femaleImg"></div>
             <h2>entrenadora<button onClick={selectFemale}>click</button> </h2>
+        </div>
         </div>
         </div>
 

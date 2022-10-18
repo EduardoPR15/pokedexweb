@@ -12,10 +12,14 @@ margin-bottom: 0;
 }
 .pokeTitle{
     width: 100%;
+    height: 50px;
 
 }
 .pokeTitle img{
-    width: 100%;
+
+    width: 50%;
+    height: 100%;
+    
 
 }
 .profesor{

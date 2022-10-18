@@ -5,6 +5,7 @@ import '../styles/Pokedex.css'
 import PokemonCard from '../componentes/Pokedex/PokemonCard'
 import InputSearch from '../componentes/Pokedex/InputSearch'
 import SelectType from '../componentes/Pokedex/SelectType'
+import Pagination from '../componentes/Pokedex/Pagination'
 
 const Pokedex = () => {
   const userStyle = useSelector(state => state.userStyle)
@@ -21,6 +22,12 @@ const limit12 = 12
 const limit16 =16
 const limit20 = 20
 const limitAll =2000
+//// paginacion
+const [page, setPage] = useState(1)
+const [PokePage, setPokePage] = useState(100)
+
+const initialPoke = (page - 1) * PokePage
+const finalPoke =(page * PokePage)
 
 useEffect(() => {
 
@@ -63,7 +70,7 @@ console.log(URLtype)
       <div className="pokedeGrid">
         <div className="pokemonCard  ">
           {
-            pokemon?.map(pokemonSingular => (
+            pokemon?.slice(initialPoke,finalPoke).map(pokemonSingular => (
               <PokemonCard 
               key={pokemonSingular.url} 
               url={pokemonSingular.url}
@@ -73,6 +80,7 @@ console.log(URLtype)
           </div>
         </div>
       </main>
+      <Pagination page={page} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
     </div>
   )
 }

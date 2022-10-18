@@ -41,10 +41,11 @@ const moveTo = () =>{
             <div className= {pokeBG}>
                 <div className="pokeName">
                   <span>{pokemon?.name}</span>
+                  </div>  
                     <div className="pokeIMG">
                       <img src={pokemon?.sprites.other.home.front_default} alt="" />
                     </div>
-                </div>   
+                 
                 </div>        
                     <div className="pokeInfo">
                       {

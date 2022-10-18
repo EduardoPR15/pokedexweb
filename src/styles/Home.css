@@ -1,3 +1,11 @@
+@font-face {
+    font-family: NintendoDS;
+    src: url(/fonts/Nintendo-DS-BIOS.ttf);
+}
+.trainergender{
+    font-family: NintendoDS;
+    font-size: 24px;
+}
 .avatar{
     position: sticky;
 }
@@ -12,7 +20,7 @@
     width: auto;
     height: 250px;
 }
-.cardTrainer:active{
+.cardTrainer:focus-within{
     background-color: black;
 }
 .femaleIMG{
@@ -28,4 +36,38 @@
     width: 100%;
     height: 20px;
     margin: auto;
+}
+button{
+    font-family: NintendoDS;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+.btnTrainer:hover{
+    background-color: antiquewhite;
+    transition: background-color 200ms;
+}
+
+.btnTrainer:hover p{
+    position: relative;
+    transform: translateX(10px);
+    transition: transform 200ms;
+
+
+}
+.btnTrainer{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    transform: translateX(10px);
+    overflow: hidden;
+
+}
+.btnTrainer p{
+    transform: translateX(100px);
+    transition: transform 200ms;
+    background-color: aqua;
+
 }
