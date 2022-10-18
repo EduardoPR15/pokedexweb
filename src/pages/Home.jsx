@@ -10,6 +10,8 @@ import getRandom from '../customHooks/getRandom'
 const Home = () => {
 const userGender = useSelector(state => state.userGender)
 const userStyle = useSelector(state => state.userStyle)
+const [Show, setShow] = useState('')
+const [Unshow, setUnshow] = useState('')
 const dispatch = useDispatch()
 const navigate = useNavigate()
 const randomProfesor = getRandom()
@@ -32,9 +34,13 @@ const handleClickHome = e =>{
 }
 const selectMale = () =>{
   dispatch(setUserGender('Male'))
+  setShow('TrainerShowM')
+  setUnshow('FUnshow')
 }
 const selectFemale = () =>{
   dispatch(setUserGender('Female'))
+  setShow('TrainerShowF')
+  setUnshow('MUnshow')
 }
 const selectedStyle = e =>{
   dispatch(setUserStyle(e.target.id))
@@ -43,35 +49,35 @@ const selectedStyle = e =>{
 //console.log(userStyle);
 function profesorPokemon(profe) {
 if (profe === 1) {
-  let profData = ['Oak','Profesor']
+  let profData = ['Oak','PROFESOR']
   return profData
 }
 if (profe === 2) {
-  let profData = ['Elm','Profesor']
+  let profData = ['Elm','PROFESOR']
   return profData
 }
 if (profe === 3) {
-  let profData = ['Abedul','Profesor']
+  let profData = ['Abedul','PROFESOR']
   return profData
 }
 if (profe === 4) {
-  let profData = ['Serbal','Profesor']
+  let profData = ['Serbal','PROFESOR']
   return profData
 }
 if (profe === 5) {
-  let profData = ['Encina','Profesora']
+  let profData = ['Encina','PROFESORA']
   return profData
 }
 if (profe === 6) {
-  let profData = ['Cipres','Profesor']
+  let profData = ['Cipres','PROFESOR']
   return profData
 }
 if (profe === 7) {
-  let profData = ['Kukui','Profesor']
+  let profData = ['Kukui','PROFESOR']
   return profData
 }
 if (profe === 8) {
-  let profData = ['Magnolia','Profesora']
+  let profData = ['Magnolia','PROFESORA']
   return profData
 }
 
@@ -86,17 +92,18 @@ console.log(profdatas[0][0]);
           <img src={randomProfImg} alt="" />
         </div>
         <div className="textbox1">
-        <p>Hola!, esta es la pokedex nacional</p>
-        <p>Me llamo {profdatas[0][0]} y soy {profdatas[0][1]} Pokemon</p>
-        
+          <div className="text1">
+        <p>Hola!, esta es la pokedex nacional.</p>
+        <p>Me llamo {profdatas[0][0]} Pero la gente me llama </p> <span>{profdatas[0][1]} POKEMON</span>
+        <p className='gender' >Dime, eres un chico o una chica</p>
+        </div>
         <div className="trainerMale">
           <div className="maleImg"></div>
-          <div className="btnTrainer"><span>Entrenador </span><p><i class='bx bx-left-arrow'></i></p></div>
-            <button onClick={selectMale}>entrenador <p> flecha </p> </button>
+          <div onClick={selectMale} className="btnTrainer"><p><i class='bx bxs-right-arrow'></i></p><span>CHICO </span></div>
         </div>
         <div className="trainerFemale">
           <div className="femaleImg"></div>
-            <h2>entrenadora<button onClick={selectFemale}>click</button> </h2>
+          <div onClick={selectFemale} className="btnTrainer"><p><i class='bx bxs-right-arrow'></i></p><span>CHICA</span></div>
         </div>
         </div>
         </div>
@@ -107,38 +114,38 @@ console.log(profdatas[0][0]);
           userGender === 'Female' ?
         
 
-        <div className="trainerFimgs"><h1>elige tu estilo</h1>
+        <div className={`TrainerIMGFemale ${Show} ${Unshow}`}><h1>elige tu estilo</h1>
           <div className="TrainerStyles">
             <div className="cardTrainer">
-              <div className="femaleIMG"><img src="/Trainers/XYF.png" alt="" /></div>
+              <div className="Trainer1IMG"><img src="/Trainers/XYF.png" alt="" /></div>
               <div className="btndiv"><button id='XYF' onClick={selectedStyle}> XY</button></div>
             </div>
 
             <div className="cardTrainer">
-              <div className="femaleIMG"><img src="/Trainers/EF.png" alt="" /></div>
+              <div className="Trainer1IMG"><img src="/Trainers/EF.png" alt="" /></div>
               <div className="btndiv"><button id='EF' onClick={selectedStyle}> Esmeralda</button></div>
             </div>
 
             <div className="cardTrainer">  
-              <div className="femaleIMG"><img src="/Trainers/RF.png" alt="" /></div>  <div className="btndiv">
+              <div className="Trainer1IMG"><img src="/Trainers/RF.png" alt="" /></div>  <div className="btndiv">
               <button id='RF' onClick={selectedStyle}> Rojo</button></div>
             </div>  
         
           </div>
         </div>
 : userGender === 'Male' ?
-        <div className="trainerMimg"><h1>elige tu estilo</h1>
+        <div className={`TrainerIMGMale ${Show} ${Unshow}`}><h1>elige tu estilo</h1>
           <div className="TrainerStyles">
             <div className="cardTrainer">
-              <div className="femaleIMG"><img src="/Trainers/RM.png" alt="" /></div>
+              <div className="Trainer1IMG"><img src="/Trainers/RM.png" alt="" /></div>
               <div className="btndiv"><button id='RM' onClick={selectedStyle} >Rojo</button></div>
             </div>
             <div className="cardTrainer">
-            <div className="femaleIMG"><img src="/Trainers/XYM.png" alt="" /></div>
+            <div className="Trainer1IMG"><img src="/Trainers/XYM.png" alt="" /></div>
             <div className="btndiv"><button id='XYM' onClick={selectedStyle} >XY</button></div>
             </div>
             <div className="cardTrainer">
-            <div className="femaleIMG"><img src="/Trainers/EM.png" alt="" /></div>
+            <div className="Trainer1IMG"><img src="/Trainers/EM.png" alt="" /></div>
             <div className="btndiv"><button id='EM' onClick={selectedStyle} >Esmeralda</button>
             </div>
         </div></div>
@@ -146,13 +153,15 @@ console.log(profdatas[0][0]);
       </div>
       : <div> </div>
 }
-      
-            <h1>POKEDEX</h1>
+      <div className="formDiv">
             <h2>Hola ingresa tu nombte</h2>
+            {/* <img src="/rotom2.png" alt="" /> */}
             <form onSubmit={handleClickHome}>
             <input id='name' type="text" />
-            <button>play</button>
+             <div className="btnrotom"></div> 
+            {/* <button><img src="/rotom1.png" alt="" /></button> */}
             </form>
+      </div>
     </div> 
 
   )

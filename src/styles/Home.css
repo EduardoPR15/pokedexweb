@@ -2,34 +2,99 @@
     font-family: NintendoDS;
     src: url(/fonts/Nintendo-DS-BIOS.ttf);
 }
+body{
+    font-family: NintendoDS;
+}
 .trainergender{
     font-family: NintendoDS;
-    font-size: 24px;
+ 
 }
 .avatar{
     position: sticky;
 }
+.textbox1{
+    background-color: white;
+    border: #5EBDFC 10px double;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 2;
+    margin: 10px;
+}
+.text1{
+    padding-bottom: 10px;
+    width: 220px;
+}
+
+.text1 p{
+    padding-bottom: 10px;
+}
 .TrainerStyles{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(40px, 2fr));
     grid-column-gap: 50px ;
     grid-row-gap: 10px;
+    height: 180px;
     
 }
+
 .cardTrainer {
-    width: auto;
-    height: 250px;
+    width: 105%;
+   height: 150px;
 }
 .cardTrainer:focus-within{
-    background-color: black;
+   
+box-shadow: rgb(255, 0, 0) 0px 40px 60px -5px;
+
 }
-.femaleIMG{
-    width: 100px;
-    height: 200px;
-    margin: auto;
+.gender{
+    margin-top: 20px;
 }
-.femaleIMG img{
+.TrainerIMGFemale h1,.TrainerIMGMale h1{
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.TrainerIMGFemale{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
     width: 100%;
+    transition-delay:2s;
+    transition: 1s;
+    
+}
+.TrainerShowF{
+    position: relative;
+    transition-delay:1s;
+    transition: 1s;
+    
+
+}
+.TrainerIMGMale{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    transition: transform 1s;
+    
+}
+.container{
+    width: 100%;
+    overflow: hidden;
+}
+.TrainerShowM{
+    
+    transition-delay:1s;
+    transition: 1s;}
+
+.Trainer1IMG{
+    width: 100%;
+    height: 100%;
+    
+}
+.Trainer1IMG img{
+    width: 90%;
     height: 100%;
 }
 .cardTrainer button{
@@ -41,33 +106,42 @@ button{
     font-family: NintendoDS;
     width: 100px;
     height: 30px;
-    display: flex;
     gap: 10px;
     overflow: hidden;
+    text-align: center;
+}
+.btndiv{
+    text-align: center;
 }
 .btnTrainer:hover{
-    background-color: antiquewhite;
     transition: background-color 200ms;
 }
 
 .btnTrainer:hover p{
-    position: relative;
+    
     transform: translateX(10px);
     transition: transform 200ms;
 
 
 }
 .btnTrainer{
-    width: 150px;
-    height: 50px;
+    width: 200px;
+    height: 30px;
     display: flex;
-    transform: translateX(10px);
+    transform: translateX(0px);
     overflow: hidden;
 
 }
 .btnTrainer p{
-    transform: translateX(100px);
-    transition: transform 200ms;
-    background-color: aqua;
+    position: relative;
+    font-size: 20px;
 
+    transform: translateX(-20px);
+    transition: transform 200ms;
+  
+
+}
+.btnTrainer span{
+    position: relative;
+    left: 10px;
 }
