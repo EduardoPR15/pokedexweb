@@ -14,9 +14,18 @@ const {id}  = useParams()
 
 const [pokemonID, setPokemonID] = useState()
 const [pokeError, setPokeError] = useState(false)
+const [useID, setUseID]= useState(id)
 
+const btnNetx = () =>{
+  
+  setUseID(parseInt(useID) + 1)
+}
+const btnBack = () =>{
+ 
+  setUseID(parseInt(useID) - 1)
+}
 useEffect(() => {
-  const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`
+  const URL = `https://pokeapi.co/api/v2/pokemon/${useID}/`
   axios.get(URL)
     .then(res => setPokemonID(res.data))
     .catch(err => {
@@ -24,9 +33,10 @@ useEffect(() => {
       setPokeError(true)
     })
 
-}, [])
+}, [useID])
 
 console.log(pokemonID)
+console.log(useID)
 const classType = `tipeContainer bg-${pokemonID?.types[0].type.name}`
 function bgclas (length){
   if (typesleng === 2) {
@@ -80,7 +90,25 @@ return (
         </div>
       <div className="IDprincipal">
         <div className="IDeffect">
+        <div className="btndivs">
+               { 
+               useID > 1 &&
+               <div onClick={btnBack}className="backbtn">
+                  <img src="/back.png" alt="" />
+                </div>
+                }
+                {
+                  useID < 905 &&
+                <div onClick={btnNetx} className="nextbtn">
+                  <img src="/pawprints.png" alt="" />
+                </div>
+                }
+                
+              </div>
             <div className="IDpokeName">
+             
+              {/* <button className='NextPoke' onClick={btnNetx}>next </button>
+              <button className='BackPoke' onClick={btnBack}>back</button> */}
                <h3>#{pokemonID?.id} {pokemonID?.name} </h3>
             </div>
           <div className="IDbg">

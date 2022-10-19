@@ -63,10 +63,10 @@ console.log(page)
       <h1>Pokedex nacional de la generacion 1 hasta la 8</h1>
       </article>
       <div className="pokeNumber">Pokemon por pagina 
-      <button className='pokenum' onClick={pokeNumb} id='4' >4</button>
-      <button className='pokenum' onClick={pokeNumb} id='8' >8</button>
-      <button className='pokenum' onClick={pokeNumb} id='16'>16</button>
-      <button className='pokenum' onClick={pokeNumb} id='32'>32</button>
+      <button className='pokenum' onClick={pokeNumb} id='6' >6</button>
+      <button className='pokenum' onClick={pokeNumb} id='12' >12</button>
+      <button className='pokenum' onClick={pokeNumb} id='18'>18</button>
+      <button className='pokenum' onClick={pokeNumb} id='36'>34</button>
       </div>
       <div className="grettings"><p>Hola</p>{ userGender === 'Male'? <span> Entrenador</span>  : <span> Entrenadora</span> }</div>
       <InputSearch setPruebaPoke={setPruebaPoke} />

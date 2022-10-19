@@ -55,6 +55,44 @@ article{
     transform: scale(1.2);
     transition: transform 500ms ease;
 }
+.btndivs{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+}
+.nextbtn,.backbtn{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.nextbtn{
+    transform: translateX(0px);
+    transition: transform 500ms;
+}
+.nextbtn:hover{
+    transform: translateX(20px);
+    transition: transform 500ms ease;
+}
+.backbtn{
+    transform: translateX(0px);
+    transition: transform 500ms;
+}
+.backbtn:hover{
+    transform: translateX(-20px);
+    transition: transform 500ms ease;
+}
+.nextbtn img{
+    width: 100%;
+    height: 100%;
+}
+.backbtn img{
+    width: 100%;
+    height: 100%;
+}
 .btnicon{
     width: 20px;
     height: 20px;
@@ -363,6 +401,9 @@ margin: auto;
         margin: auto;
         padding-top: 10px;
         width: 400px;
+    }
+    .selectdiv{
+        top: 40px;
     }
     .searchDiv input{
         width: 400px;
