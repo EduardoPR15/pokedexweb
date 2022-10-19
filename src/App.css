@@ -5,7 +5,7 @@ background-repeat: no-repeat;
 background-position: center;
 backdrop-filter: blur(10px);
 cursor: url(../public/cursor1.png),auto;
-min-height: 90vh;
+min-height: 100vh;
 margin-bottom: 0;
 }
 .App{
@@ -149,7 +149,7 @@ input:focus{
     max-height: 100vh; 
  }
  .pokeTitle{
-    width: 100%;
+    width: 50%;
     height: 120px;
     display: flex;
     justify-content: center;

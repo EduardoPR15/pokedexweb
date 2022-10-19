@@ -7,6 +7,7 @@
     right: 50px;
     z-index: 20;
     overflow: hidden;
+    transition:  transform 500ms;
 }
 .IDpokeSprite img{
     width: 100%;
@@ -14,6 +15,10 @@
     filter: drop-shadow(14px 6px 8px rgba(0, 0, 0, 0.566));
     right:  40px;
     bottom: 40px;
+}
+.IDpokeSprite:hover{
+    transform: scale(1.2);
+    transition:  transform 500ms;
 }
 .searchDiv{
     margin-bottom: 50px;
@@ -37,6 +42,12 @@ flex-direction: column;
     display: flex;
     width: 100%;
     height: 200px;
+    transition: transform 500ms;
+}
+.IDpokeIMG:hover{
+    transform: rotate3d(0,1,0,30deg);
+    transition: transform 500ms;
+
 }
 .IDpokeIMG img{
     margin: auto;
@@ -120,7 +131,7 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     height: auto;
     display: flex;
     margin: auto;
-    color: blue;
+ 
 }
 .progresLine{
     display: flex;
@@ -174,10 +185,10 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     .IDpokeStats{
         
         width: 400px;
-        height: 350px;
-        padding-bottom: 100px;
+        height: 320px;
+        padding-bottom: 15px;
         justify-content: left;
-        overflow: visible;
+        overflow-y: visible;
         /* position: relative;
         bottom: 450px;
         left: 380px; */
