@@ -112,16 +112,16 @@ return (
                         ))
                       } */}
                 </div>
-                <div className="IDpokeGames">
+              
+                lo que sea necesario
+              </div>
+  <div className="IDpokeGames">
                   {
                     pokemonID?.game_indices.map(game =>(
                       <li> {game.version.name}</li>
                     ))
                   }
                 </div>
-                lo que sea necesario
-              </div>
-
             
           </div>
         </div>

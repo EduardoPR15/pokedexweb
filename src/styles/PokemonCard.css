@@ -120,8 +120,13 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     .IDprincipal{
         height: 100%;
         width: 100vh;
+       
+    }
+    .IDbg{
+        background-color: aliceblue;
         display: flex;
-        margin: auto;
+        flex-direction: row;
+
     }
     .IDpokeIMG{
         height: 350px;
@@ -132,7 +137,7 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
         width: 350px;
     }
     .IDpokeStats{
-        display: flex;
+        
         width: 400px;
         height: 350px;
         padding-bottom: 100px;
