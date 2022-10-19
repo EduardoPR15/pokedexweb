@@ -88,10 +88,10 @@ console.log(profdatas[0][0]);
   return (
     <div>
       <div className="trainergender">
-        <div className="profesor">
+        <div className="textbox1">
+          <div className="profesor">
           <img src={randomProfImg} alt="" />
         </div>
-        <div className="textbox1">
           <div className="text1">
         <p>Hola!, esta es la pokedex nacional.</p>
         <p>Me llamo {profdatas[0][0]} Pero la gente me llama </p> <span>{profdatas[0][1]} POKEMON</span>

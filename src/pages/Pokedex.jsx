@@ -55,12 +55,13 @@ console.log(URLtype)
   return (
     <div className='PokedexContainer'>
       <article> 
-      <h1>pokedex nacional de la generacion 1 hasta la 8</h1>
-      <h2>y algunos conocidos de la 9na generacion</h2>
-      <p>Hola </p>{ userGender === 'Male'? <span>Entrenador</span>  : <span>Entrenadora</span> } <p>{userName}</p></article>
+      <h1>Pokedex nacional de la generacion 1 hasta la 8</h1>
+      </article>
+      <div className="grettings"><p>Hola</p>{ userGender === 'Male'? <span> Entrenador</span>  : <span> Entrenadora</span> }</div>
       <InputSearch />
+      <div className="selectdiv1">
       <SelectType setURLtype={setURLtype}/>
-      
+      </div>
       <Pagination page={page} setPage={setPage} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
       <div className='avatar'>
         <div className="trainerStyleOn">
