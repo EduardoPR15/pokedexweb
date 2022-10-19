@@ -175,6 +175,9 @@ button:hover{
     left: 10px;
 }
 @media (min-width: 500px){
+    body{
+        font-family: NintendoDS;
+    }
     .textbox1{
         margin: auto;
         background-color:white;
