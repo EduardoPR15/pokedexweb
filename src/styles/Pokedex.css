@@ -98,6 +98,7 @@ article{
 }
 .onList{
     display: flex;
+    background-color: white;
     /* poner backgorun */
 }
 .selectdiv{
@@ -122,7 +123,7 @@ article{
     width: 100px;
     height: 50px;
     text-align: left;
-    border-bottom: #99CC33 5px solid;
+    border-bottom: #000000 5px solid;
 
 }
 .selection{

@@ -20,20 +20,28 @@ const limitPage = blockLength === currentBlock ? pokemonLength : currentBlock * 
     const handleNext = () =>{
         setPage(page + 1)
     }
-    const handleFocus = ()=>{
-        console.log('ola');
+    const handleFocus = currentPage =>{
+       setPage(currentPage)
     }
-
-    function arrowBtn(numberp) {
-        if (numberp === 1) {
+console.log(pokemonLength);
+    function arrowBtn(numberp, pokemonLength) {
+        if (numberp === 1 ) {
             let ArrowBtn = 'ArrowNone'
             return ArrowBtn
             
         }
-
     }
-const btnArrow = arrowBtn(page)
+    function arrowBtn1(numberp, pokemonLength) {
+        if (numberp === pokemonLength) {
+            let ArrowBtn1 = 'ArrowNone'
+            return ArrowBtn1
+            
+        }
+    }
+const btnArrow = arrowBtn(page, pokemonLength)
+const btnArrow1 = arrowBtn1(page, pokemonLength)
 console.log(btnArrow);
+console.log(btnArrow1)
 
     return (
     <div className='Pagination'>
@@ -46,11 +54,11 @@ console.log(btnArrow);
         <ul className='pageContainer'>
             {
                 arrPages.map(e => (
-                    <li onClick={handleFocus} className={`paginationPage ${page === e && 'paginationActive'}`} key={e}>{e}</li>
+                    <li onClick={()=>handleFocus(e)} className={`paginationPage ${page === e && 'paginationActive'}`} key={e}>{e}</li>
                 ))
             }
         </ul>
-        <div onClick={handleNext} className="nextPage paginationActivebtn"><i className='bx bxs-chevrons-right'></i></div>
+        <div onClick={handleNext} className={`nextPage paginationActivebtn ${btnArrow1}`}><i className='bx bxs-chevrons-right'></i></div>
     </div>
   )
 }
