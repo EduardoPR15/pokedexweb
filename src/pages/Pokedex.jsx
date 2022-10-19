@@ -24,7 +24,7 @@ const limit20 = 20
 const limitAll =2000
 //// paginacion
 const [page, setPage] = useState(1)
-const [PokePage, setPokePage] = useState(8)
+const [PokePage, setPokePage] = useState(4)
 
 const initialPoke = (page - 1) * PokePage
 const finalPoke =(page * PokePage)
@@ -51,16 +51,26 @@ axios.get(URLtype)
 //console.log(pokemon)
 console.log(URLtype)
 
-
+const pokeNumb = btn =>{
+setPokePage(btn.target.id)
+console.log(btn.target.id);
+}
+console.log(page)
   return (
     <div className='PokedexContainer'>
       <article> 
       <h1>Pokedex nacional de la generacion 1 hasta la 8</h1>
       </article>
+      <div className="pokeNumber">Pokemon por pagina 
+      <button className='pokenum' onClick={pokeNumb} id='4' >4</button>
+      <button className='pokenum' onClick={pokeNumb} id='8' >8</button>
+      <button className='pokenum' onClick={pokeNumb} id='16'>16</button>
+      <button className='pokenum' onClick={pokeNumb} id='32'>32</button>
+      </div>
       <div className="grettings"><p>Hola</p>{ userGender === 'Male'? <span> Entrenador</span>  : <span> Entrenadora</span> }</div>
       <InputSearch />
       <div className="selectdiv1">
-      <SelectType setURLtype={setURLtype}/>
+      <SelectType setURLtype={setURLtype} setPage={setPage}/>
       </div>
       <Pagination page={page} setPage={setPage} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
       <div className='avatar'>

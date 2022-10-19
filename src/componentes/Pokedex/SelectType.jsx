@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const SelectType = ({setURLtype}) => {
+const SelectType = ({setURLtype, setPage}) => {
 
     const [typesPoke, settypesPoke]= useState()
     const [list, setList] = useState('offList')
@@ -23,7 +23,8 @@ const handleClick = es =>{
   //setURLtype(e.target.value)
   setURLtype(es.target.value);
   setSelectedType(es.target.id);
-  setList('offList')
+  setList('offList');
+  setPage(1);
   //console.log(list);
 }
 const showList = lis =>{

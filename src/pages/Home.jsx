@@ -21,7 +21,7 @@ const [profe, setprofe] = useState(1)
 useEffect(() => {
   setprofe(randomProfesor)
 }, [])
-console.log(profe);
+//console.log(profe);
 const randomProfImg = `./Profesor/${profe}.png`
 const handleClickHome = e =>{
   
