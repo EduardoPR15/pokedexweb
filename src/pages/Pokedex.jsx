@@ -12,9 +12,10 @@ const Pokedex = () => {
   const userGender = useSelector(state => state.userGender)
 const [pokemon,setpokemon]= useState()
 const [URLtype, setURLtype] = useState('All')
+const [pruebaPoke, setPruebaPoke] = useState('1')
 const userName = useSelector(state => state.userName)
 const trainerImgage = `/Trainers/${userStyle}.png`
-
+console.log(pruebaPoke)
 
 const limit4 = 4
 const limit8 = 8
@@ -68,7 +69,7 @@ console.log(page)
       <button className='pokenum' onClick={pokeNumb} id='32'>32</button>
       </div>
       <div className="grettings"><p>Hola</p>{ userGender === 'Male'? <span> Entrenador</span>  : <span> Entrenadora</span> }</div>
-      <InputSearch />
+      <InputSearch setPruebaPoke={setPruebaPoke} />
       <div className="selectdiv1">
       <SelectType setURLtype={setURLtype} setPage={setPage}/>
       </div>
@@ -85,7 +86,8 @@ console.log(page)
         <div className="pokemonCard  ">
           {
             pokemon?.slice(initialPoke,finalPoke).map(pokemonSingular => (
-              <PokemonCard 
+              <PokemonCard setPruebaPoke={setPruebaPoke}
+              pruebaPoke={pruebaPoke}
               key={pokemonSingular.url} 
               url={pokemonSingular.url}
               />

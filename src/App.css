@@ -5,7 +5,7 @@ background-repeat: no-repeat;
 background-position: center;
 backdrop-filter: blur(10px);
 cursor: url(../public/cursor1.png),auto;
-min-height: 100vh;
+min-height: 90vh;
 margin-bottom: 0;
 }
 .App{

@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 
-const PokemonCard = ({url}) => {
+const PokemonCard = ({url, setPruebaPoke, pruebaPoke}) => {
 
 const [pokemon, setPokemon] = useState()
 const navigate = useNavigate()
@@ -32,16 +32,17 @@ return classType
 const pokeBG = bgclas(typesleng)
 //console.log(bgclas(typesleng))
 const moveTo = () =>{
-  //console.log('ola');
+  setPruebaPoke('ola')
   navigate(`/pokedex/${pokemon.id}`)
 }
+console.log(pruebaPoke);
   return (
     <div onClick={moveTo} className="principal">
         <div className="bgcard">
             <div className= {pokeBG}>
                 <div className="pokeName">
                   <span>{pokemon?.name}</span>
-                  </div>  
+                  </div> 
                     <div className="pokeIMG">
                       <img src={pokemon?.sprites.other.home.front_default} alt="" />
                     </div>

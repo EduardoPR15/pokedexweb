@@ -24,7 +24,7 @@ const Return = () =>{
 
       </Routes>
       </div>
-      <footer className='footerPoke'>Intentar poner pokemon fav</footer>
+      {/* <footer className='footerPoke'>Intentar poner pokemon fav</footer> */}
     </div>
   )
 }

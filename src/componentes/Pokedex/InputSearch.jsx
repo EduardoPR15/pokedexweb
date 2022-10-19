@@ -11,6 +11,7 @@ const submit = e => {
     e.preventDefault()
 console.log(e.target.search.value)
 navigate(`/pokedex/${e.target.search.value.trim().toLowerCase()}`)
+//navigate(`/pokedex`)
 }
 
 

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import InputSearch from '../componentes/Pokedex/InputSearch'
 import PokeError404 from '../componentes/PokedexID/PokeError404'
 import '../styles/PokemonCard.css'
-const PokedexID = () => {
+const PokedexID = ({pruebaPoke}) => {
   const userStyle = useSelector(state => state.userStyle)
   const trainerImgage = `/Trainers/${userStyle}.png`
   const userName = useSelector(state => state.userName)
@@ -114,15 +114,15 @@ return (
                       } */}
                 </div>
               
-                lo que sea necesario
+              
               </div>
-  <div className="IDpokeGames">
+                {/* <div className="IDpokeGames">
                   {
                     pokemonID?.game_indices.map(game =>(
                       <li> {game.version.name}</li>
                     ))
                   }
-                </div>
+                </div> */}
             
           </div>
         </div>
