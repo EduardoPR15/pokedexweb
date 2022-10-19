@@ -19,6 +19,16 @@
     margin-bottom: 50px;
     margin-top: -40px;
 }
+.searchDiv form{
+display: flex;  
+flex-direction: column;  
+}
+.searchDiv button{
+    margin: auto;
+    width: 40px;
+    background-size: cover;
+}
+
 .IDprincipal{
     width: 100%;
     height: 600px;
@@ -34,10 +44,20 @@
     height: 100%;
     filter: drop-shadow(14px 6px 8px #000);
 }
+.IDprincipal{
+    width: 100%;
+    
+
+}
+.IDeffect{
+    width: 100%;
+}
 .IDpokeName{
+    padding-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     height: 50px;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     text-transform: capitalize;
     background: rgba(255, 255, 255, 0.15);
@@ -45,7 +65,7 @@
     -webkit-backdrop-filter: blur(10px);
 }
 .IDpokeinfo{
-    background-color: aquamarine;
+  
 }
 .IDpokeTypes{
     list-style: none;
@@ -60,7 +80,8 @@
 
 }
 .IDpokeStats{
-    background-color: blueviolet;
+    text-transform: uppercase;
+   background-color: white;
     height: 150px;
     font-size: 24px;
     overflow-y: scroll;
@@ -104,10 +125,13 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     margin: auto;
     width: 255px;
     height: 20px;
-    background-color: aqua;
     border-radius: 15px;
     overflow: hidden;
 }
+.valuePad{
+   margin-left: 10px;
+}
+
 @media (min-width: 670px){
     .IDpokeSprite{
         top: 70px;
@@ -119,11 +143,17 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     }
     .IDprincipal{
         height: 100%;
-        width: 100vh;
+        
        
     }
+    .IDeffect{
+        width: 100%;
+    }
+    .IDpokeName{
+        width: 100%;
+    }
     .IDbg{
-        background-color: aliceblue;
+        background: rgba(255, 255, 255, 0.15);
         display: flex;
         flex-direction: row;
 
@@ -139,14 +169,125 @@ animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     .IDpokeStats{
         
         width: 400px;
-        height: 350px;
+        height: 300px;
         padding-bottom: 100px;
         justify-content: left;
         overflow: visible;
         /* position: relative;
         bottom: 450px;
         left: 380px; */
-        background-color: aqua;
+    
     
     }
+}
+/* TIPOS */
+
+ .bg-normalCs{
+    
+    background-color:  rgba(190,190,190,1);
+}
+.bg-normalC{
+    
+    color:   rgba(204,178,157,1) 
+}
+.bg-waterCs{
+    background: rgba(43,136,222,1);
+}
+.bg-waterC{
+    color: rgb(134,182,174);
+}
+.bg-grassCs{
+    background: rgba(83,255,82,1);
+}
+.bg-grassC{
+color:  rgb(128,195,129);
+}
+.bg-psychicC{
+color:rgba(191,21,124,1) ;
+}
+.bg-psychicCs{
+    background: rgb(245,113,140);
+}
+.bg-fireC{
+    color: rgb(255,214,48);
+}
+.bg-fireCs{
+    background:  rgba(198,17,11);
+}
+.bg-electricC{
+    color:  rgba(251,232,0);
+    
+}
+.bg-electricCs{
+    background-color: rgb(238,229,153);
+}
+.bg-fightingCs{
+   
+background: rgb(214, 100, 23);
+}
+.bg-fightingC{
+    color: rgb(235,168,127);
+}
+.bg-fairyC{
+    
+color:  rgba(251,113,252,1);
+}
+.bg-fairyCs{
+    background: rgb(235,177,242);
+}
+.bg-bugC{
+color: rgba(99,191,21,1) ;
+}
+.bg-bugCs{
+    background: rgb(215,245,113);
+}
+.bg-iceC{
+color:  rgba(21,191,172,1);
+}
+.bg-iceCs{
+    background: rgb(208,255,246);
+}
+.bg-groundC{
+color:rgba(157,79,6,1);
+}
+.bg-groundCs{
+    background: rgb(210,165,129);
+}
+.bg-poisonC{
+color: rgb(77,26,101);
+}
+.bg-poisonCs{
+    background: rgba(128,61,182,1) ;
+}
+.bg-rockC{
+    color: rgba(214,159,39,1) ;
+}
+.bg-rockCs{
+    background: rgb(173,123,23);
+    color: rgba(214,159,39,1) ;
+}
+.bg-ghostC{
+color: rgba(71,79,133,1);
+}
+.bg-ghostCs{
+    background: rgb(90,92,110);
+}
+.bg-dragonC{
+color: rgba(25,35,129,1);
+}
+.bg-dragonCs{
+    background: rgb(26,32,89);
+}
+.bg-darkC{
+   
+color:  rgba(4,4,4,1) ;
+}
+.bg-darkCs{
+    background: rgb(62,62,62);
+}
+.bg-steelC{
+color:  rgba(133,133,133,1);
+}
+.bg-steelCs{
+    background: rgb(186,186,186);
 }

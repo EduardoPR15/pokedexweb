@@ -80,14 +80,15 @@ return (
         </div>
       <div className="IDprincipal">
         <div className="IDeffect">
+            <div className="IDpokeName">
+               <h3>#{pokemonID?.id} {pokemonID?.name} </h3>
+            </div>
           <div className="IDbg">
             
               <div className="IDpokeIMG">
                   <img src={pokemonID?.sprites.other["official-artwork"].front_default} alt="" />
               </div>
-              <div className="IDpokeName">
-               <h3>#{pokemonID?.id} {pokemonID?.name} </h3>
-            </div>
+            
               <div className="IDpokeinfo">
                 <div className="IDpokeTypes">
                 {
@@ -98,12 +99,12 @@ return (
                 </div>
                 <div className="IDpokeStats">
                 
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[0].stat.name}</span> <div className="progresLine"> <div style={progresStyle} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[0].base_stat}</span></div> 
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[1].stat.name}</span> <div className="progresLine"> <div style={progresStyle1} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[1].base_stat}</span></div> 
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[2].stat.name}</span> <div className="progresLine"> <div style={progresStyle2} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[2].base_stat}</span></div> 
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[5].stat.name}</span> <div className="progresLine"> <div style={progresStyle5} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[5].base_stat}</span></div>
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[3].stat.name}</span> <div className="progresLine"> <div style={progresStyle3} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[3].base_stat}</span></div> 
-                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[4].stat.name}</span> <div className="progresLine"> <div style={progresStyle4} className={` ValueStat ${classType}Cs`}></div><span>{pokemonID?.stats[4].base_stat}</span></div>
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[0].stat.name}</span> <div className="progresLine"> <div style={progresStyle} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`}>{pokemonID?.stats[0].base_stat}</span></div> 
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[1].stat.name}</span> <div className="progresLine"> <div style={progresStyle1} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[1].base_stat}</span></div> 
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[2].stat.name}</span> <div className="progresLine"> <div style={progresStyle2} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[2].base_stat}</span></div> 
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[5].stat.name}</span> <div className="progresLine"> <div style={progresStyle5} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[5].base_stat}</span></div>
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[3].stat.name}</span> <div className="progresLine"> <div style={progresStyle3} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[3].base_stat}</span></div> 
+                      <span className={`IDstats ${classType}C`}>{pokemonID?.stats[4].stat.name}</span> <div className="progresLine"> <div style={progresStyle4} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[4].base_stat}</span></div>
                 {/* {
                         pokemonID?.stats.map(stat =>(
                           <li key={stat.name}>

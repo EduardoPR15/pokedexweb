@@ -8,12 +8,12 @@ article{
     width: 300px;
 }
 .pokeNumber{
-    position:absolute;
-    top: 100px;
+    position:relative;
+    top: 90px;
     display: flex;
-    margin: auto;
+    margin: left;
     width: 150px;
-    left: 20px;
+    left: 10px;
     height: auto;
 }
 .pokeNumber button{
@@ -209,6 +209,8 @@ margin: auto;
     overflow-y: scroll;
     position: relative;
     z-index: 10;
+    padding-top: 40px;
+    margin-top: 10px;
     
    
     
@@ -242,11 +244,15 @@ margin: auto;
     border: rgb(223, 189, 115) 10px solid;
     border-radius: 10px;
     margin: auto;
+    transition: transform 500ms;
     /* overflow: hidden; */
 
 }
+
 .principal:hover{
     cursor: url(../cursor3.png),auto;
+    transform: scale(1.2);
+    transition: transform 500ms;
 }
 .bgcard:hover{
     cursor: url(../cursor3.png),auto;
@@ -404,7 +410,9 @@ margin: auto;
     padding-top: 5px;
     font-size: 20px;
   }
+
 .pokeStats{
+    
     grid-template-columns: repeat(auto-fit, minmax(50px, 3fr));
 }
 .pokeStats span{
@@ -448,12 +456,7 @@ margin: auto;
     background: rgb(190,190,190);
     background: linear-gradient(0deg, rgba(190,190,190,1) 0%, rgba(204,178,157,1) 60%);
 }
-.bg-normalC{
-    color:   rgba(204,178,157,1) 
-}
-.bg-normalCs{
-    color:  rgb(190,190,190);
-}
+
 .bg-water{
     background: rgb(134,182,174);
 background: linear-gradient(0deg, rgba(134,182,174,1) 0%, rgba(43,136,222,1) 60%);
@@ -462,6 +465,7 @@ background: linear-gradient(0deg, rgba(134,182,174,1) 0%, rgba(43,136,222,1) 60%
     background: rgb(128,195,129);
 background: linear-gradient(0deg, rgba(128,195,129,1) 0%, rgba(83,255,82,1) 60%);
 }
+
 .bg-psychic{
     background: rgb(245,113,140);
 background: linear-gradient(0deg, rgba(245,113,140,1) 0%, rgba(191,21,124,1) 60%);

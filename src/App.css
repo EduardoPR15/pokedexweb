@@ -15,12 +15,21 @@ margin-bottom: 0;
 .pokeTitle{
     width: 100%;
     height: 50px;
-
+    transition: transform .5s;
+    filter: drop-shadow(14px 6px 8px rgba(0, 0, 0, 0.566));
+    
+}
+.pokeTitle:hover{
+    transform: rotate3d(0,1,0,40deg);
+    z-index: 30;
+    transition: transform .5s;
+    
 }
 .pokeTitle img{
 
     width: 50%;
     height: 100%;
+   
     
 
 }
@@ -91,7 +100,6 @@ input:focus{
     /* position: absolute; */
     margin-left: auto;
     margin-right:auto;
-    margin-top: 15px;
     margin-bottom: 10px;
     width: 100%;
     display: flex;
@@ -131,9 +139,9 @@ input:focus{
  @media (min-width: 600px) {
  body{
   
-    /* background-image: url(../Pokémon-Unite-Background-Pictures.png);
-    background-size: auto; */
-    background-image: none;
+    /* /* background-image: url(../Pokémon-Unite-Background-Pictures.png);
+    background-size: auto; 
+    background-image: none; */
     background-position: center;
     backdrop-filter: blur(10px);
     width: 100%;
@@ -156,11 +164,16 @@ input:focus{
     
 
 }
+.pokeNumber{
+    width: 100px;
+    height: 20px;
+   
+}
 .Pagination{
     border-radius: 15px;
-    margin-top:40px ;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -40px;
     justify-content: center;
 }
 }

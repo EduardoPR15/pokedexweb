@@ -58,12 +58,12 @@ const moveTo = () =>{
 
                     </div>
                     <div className="pokeStats">
-                      <span className={`HPstat ${classType}C`}>{pokemon?.stats[0].stat.name}</span> <span className={`HPvalue ${classType}Cs`}>{pokemon?.stats[0].base_stat}</span>
-                      <span className={`ATstat ${classType}C`}>{pokemon?.stats[1].stat.name}</span> <span className={`ATvalue ${classType}Cs`}>{pokemon?.stats[1].base_stat}</span>
-                      <span className={`DFstat ${classType}C`}>{pokemon?.stats[2].stat.name}</span> <span className={`DFvalue ${classType}Cs`}>{pokemon?.stats[2].base_stat}</span>
-                      <span className={`SPstat ${classType}C`}>{pokemon?.stats[5].stat.name}</span> <span className={`SPvalue ${classType}Cs`}>{pokemon?.stats[5].base_stat}</span>
-                      <span className={`SATstat ${classType}C`}>{pokemon?.stats[3].stat.name}</span> <span className={`SATvalue ${classType}Cs`}>{pokemon?.stats[3].base_stat}</span>
-                      <span className={`SDFstat ${classType}C`}>{pokemon?.stats[4].stat.name}</span> <span className={`SDFvalue ${classType}Cs`}>{pokemon?.stats[4].base_stat}</span>
+                      <span className={`HPstat ${classType}C`}>{pokemon?.stats[0].stat.name}</span> <span className={`HPvalue ${classType}C`}>{pokemon?.stats[0].base_stat}</span>
+                      <span className={`ATstat ${classType}C`}>{pokemon?.stats[1].stat.name}</span> <span className={`ATvalue ${classType}C`}>{pokemon?.stats[1].base_stat}</span>
+                      <span className={`DFstat ${classType}C`}>{pokemon?.stats[2].stat.name}</span> <span className={`DFvalue ${classType}C`}>{pokemon?.stats[2].base_stat}</span>
+                      <span className={`SPstat ${classType}C`}>{pokemon?.stats[5].stat.name}</span> <span className={`SPvalue ${classType}C`}>{pokemon?.stats[5].base_stat}</span>
+                      <span className={`SATstat ${classType}C`}>{pokemon?.stats[3].stat.name}</span> <span className={`SATvalue ${classType}C`}>{pokemon?.stats[3].base_stat}</span>
+                      <span className={`SDFstat ${classType}C`}>{pokemon?.stats[4].stat.name}</span> <span className={`SDFvalue ${classType}C`}>{pokemon?.stats[4].base_stat}</span>
                       
 
                     </div>
