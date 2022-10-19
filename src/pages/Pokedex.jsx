@@ -24,7 +24,7 @@ const limit20 = 20
 const limitAll =2000
 //// paginacion
 const [page, setPage] = useState(1)
-const [PokePage, setPokePage] = useState(4)
+const [PokePage, setPokePage] = useState(8)
 
 const initialPoke = (page - 1) * PokePage
 const finalPoke =(page * PokePage)

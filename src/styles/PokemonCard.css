@@ -1,0 +1,147 @@
+.IDpokeSprite{
+    position: absolute;
+   
+    width: 100px;
+    height: 100px;
+    top: 30px;
+    right: 50px;
+    z-index: 20;
+    overflow: hidden;
+}
+.IDpokeSprite img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(14px 6px 8px rgba(0, 0, 0, 0.566));
+    right:  40px;
+    bottom: 40px;
+}
+.searchDiv{
+    margin-bottom: 50px;
+    margin-top: -40px;
+}
+.IDprincipal{
+    width: 100%;
+    height: 600px;
+}
+.IDpokeIMG{
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+.IDpokeIMG img{
+    margin: auto;
+    width: 200px;
+    height: 100%;
+    filter: drop-shadow(14px 6px 8px #000);
+}
+.IDpokeName{
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.IDpokeinfo{
+    background-color: aquamarine;
+}
+.IDpokeTypes{
+    list-style: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+}
+.IDpokeStats{
+    background-color: blueviolet;
+    height: 150px;
+    font-size: 24px;
+    overflow-y: scroll;
+    padding-bottom: 10px ;
+}
+.IDstats{
+    width: 100%;
+    display: flex;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+
+}
+.ValueStat{
+background-color: aliceblue;
+transform: scaleX(0);
+transform-origin: left;
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+    
+}
+
+.ValueStat span{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    color: blue;
+}
+.progresLine{
+    display: flex;
+    margin: auto;
+    width: 255px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 15px;
+    overflow: hidden;
+}
+@media (min-width: 670px){
+    .IDpokeSprite{
+        top: 70px;
+        right: 90px;
+        background: transparent;
+    }
+    .searchDiv{
+        margin-top: 10px;
+    }
+    .IDprincipal{
+        height: 100%;
+        width: 100vh;
+        display: flex;
+        margin: auto;
+    }
+    .IDpokeIMG{
+        height: 350px;
+        width: 350px;
+        
+    }
+    .IDpokeIMG img{
+        width: 350px;
+    }
+    .IDpokeStats{
+        display: flex;
+        width: 400px;
+        height: 350px;
+        padding-bottom: 100px;
+        justify-content: left;
+        overflow: visible;
+        /* position: relative;
+        bottom: 450px;
+        left: 380px; */
+        background-color: aqua;
+    
+    }
+}
