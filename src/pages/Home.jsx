@@ -99,11 +99,11 @@ console.log(profdatas[0][0]);
         </div>
         <div className="trainerMale">
           <div className="maleImg"></div>
-          <div onClick={selectMale} className="btnTrainer"><p><i class='bx bxs-right-arrow'></i></p><span>CHICO </span></div>
+          <div onClick={selectMale} className="btnTrainer"><p><i className='bx bxs-right-arrow'></i></p><span>CHICO </span></div>
         </div>
         <div className="trainerFemale">
           <div className="femaleImg"></div>
-          <div onClick={selectFemale} className="btnTrainer"><p><i class='bx bxs-right-arrow'></i></p><span>CHICA</span></div>
+          <div onClick={selectFemale} className="btnTrainer"><p><i className='bx bxs-right-arrow'></i></p><span>CHICA</span></div>
         </div>
         </div>
         </div>

@@ -34,7 +34,7 @@ console.log(list)
 console.log(selectedType); 
   return (
     <div className='selectType' >
-      <option onClick={handleClick} value="All">ALL</option> <span onClick={showList} className='btnlist'> <i class='bx bx-menu' ></i></span>
+      <option onClick={handleClick} value="All">ALL</option> <span onClick={showList} className='btnlist'> <i className='bx bx-menu' ></i></span>
       <p>{selectedType}</p>
       <div className={`selectdiv ${list}`}>
       {/* <option value="All">All</option> <span className='btnlist'> CLick</span> */}

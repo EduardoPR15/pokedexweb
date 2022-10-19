@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pagination = ({page, pokemonLength}) => {
+const Pagination = ({page,setPage, pokemonLength}) => {
 
     const pagesBLock = 8
     const currentBlock = Math.ceil(page / pagesBLock)
@@ -14,17 +14,43 @@ const limitPage = blockLength === currentBlock ? pokemonLength : currentBlock * 
         arrPages.push(i)
     }
 
+    const handlePrev= () =>{
+        setPage(page -1)
+    }
+    const handleNext = () =>{
+        setPage(page + 1)
+    }
+    const handleFocus = ()=>{
+        console.log('ola');
+    }
+
+    function arrowBtn(numberp) {
+        if (numberp === 1) {
+            let ArrowBtn = 'ArrowNone'
+            return ArrowBtn
+            
+        }
+
+    }
+const btnArrow = arrowBtn(page)
+console.log(btnArrow);
+
     return (
     <div className='Pagination'>
-        <div className="backPage">atras<i class='bx bxs-chevrons-left'></i></div>
+        
+            
+             <div onClick={handlePrev} className={`backPage paginationActivebtn ${btnArrow} `}><i className='bx bxs-chevrons-left'></i></div>
+        
+       
+        
         <ul className='pageContainer'>
             {
                 arrPages.map(e => (
-                    <li className='paginationPage' key={e}>{e}</li>
+                    <li onClick={handleFocus} className={`paginationPage ${page === e && 'paginationActive'}`} key={e}>{e}</li>
                 ))
             }
         </ul>
-        <div className="nextPage">adelante<i class='bx bxs-chevrons-right'></i></div>
+        <div onClick={handleNext} className="nextPage paginationActivebtn"><i className='bx bxs-chevrons-right'></i></div>
     </div>
   )
 }

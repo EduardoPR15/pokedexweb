@@ -115,6 +115,7 @@ input:focus{
     display: flex;
     gap: 1px;
     list-style: none;
+    background-color: azure;
 }
 .paginationPage{
     width: 40px;
@@ -125,9 +126,15 @@ input:focus{
 
 }
 .paginationActive{
-    background-color: red;
+ background-color: yellow;
 }
-
+.paginationActivebtn{
+    color: yellow;
+    font-size: 24px;
+}
+.ArrowNone{
+    color: transparent;
+}
  /* @media (max-width: 600px) {
  body{
     background-image: url(../Pokémon-Unite-Background-Pictures.png);

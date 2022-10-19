@@ -24,7 +24,7 @@ const limit20 = 20
 const limitAll =2000
 //// paginacion
 const [page, setPage] = useState(1)
-const [PokePage, setPokePage] = useState(100)
+const [PokePage, setPokePage] = useState(8)
 
 const initialPoke = (page - 1) * PokePage
 const finalPoke =(page * PokePage)
@@ -51,6 +51,7 @@ axios.get(URLtype)
 //console.log(pokemon)
 console.log(URLtype)
 
+
   return (
     <div className='PokedexContainer'>
       <article> 
@@ -60,7 +61,7 @@ console.log(URLtype)
       <InputSearch />
       <SelectType setURLtype={setURLtype}/>
       
-      <Pagination page={page} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
+      <Pagination page={page} setPage={setPage} pokemonLength={pokemon && Math.ceil(pokemon.length / PokePage)}/>
       <div className='avatar'>
         <div className="trainerStyleOn">
         <img src={trainerImgage} alt="" />
