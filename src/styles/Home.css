@@ -177,7 +177,7 @@ button:hover{
 @media (min-width: 500px){
     .textbox1{
         margin: auto;
-        background-color: aqua;
+        background-color:white;
         font-size: 24px;
         grid-template-columns: repeat(2);
         grid-template-rows: repeat(3);
