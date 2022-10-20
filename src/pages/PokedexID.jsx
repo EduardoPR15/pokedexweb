@@ -33,20 +33,11 @@ useEffect(() => {
       setPokeError(true)
     })
 
-}, [useID])
+}, [useID,id])
 
 console.log(pokemonID)
 console.log(useID)
 const classType = `tipeContainer bg-${pokemonID?.types[0].type.name}`
-function bgclas (length){
-  if (typesleng === 2) {
-  let classType2 = `-${pokemonID?.types[1].type.name}`
-  let classTyp3 = classType + classType2
-  return classTyp3
-}else
-return classType
-
-}
 const progresStyle = {
   width: (pokemonID?.stats[0].base_stat ),
   color: 'red'
@@ -77,7 +68,7 @@ if(pokeError){
 
 return (
     <div>
-      <InputSearch/>
+      <InputSearch setUseID={setUseID} />
       
       <div className='avatar'>
         <div className="trainerStyleOn">
@@ -106,9 +97,6 @@ return (
                 
               </div>
             <div className="IDpokeName">
-             
-              {/* <button className='NextPoke' onClick={btnNetx}>next </button>
-              <button className='BackPoke' onClick={btnBack}>back</button> */}
                <h3>#{pokemonID?.id} {pokemonID?.name} </h3>
             </div>
           <div className="IDbg">
@@ -133,24 +121,12 @@ return (
                       <span className={`IDstats ${classType}C`}>{pokemonID?.stats[5].stat.name}</span> <div className="progresLine"> <div style={progresStyle5} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[5].base_stat}</span></div>
                       <span className={`IDstats ${classType}C`}>{pokemonID?.stats[3].stat.name}</span> <div className="progresLine"> <div style={progresStyle3} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[3].base_stat}</span></div> 
                       <span className={`IDstats ${classType}C`}>{pokemonID?.stats[4].stat.name}</span> <div className="progresLine"> <div style={progresStyle4} className={` ValueStat ${classType}Cs`}></div><span className={`valuePad ${classType}C`} >{pokemonID?.stats[4].base_stat}</span></div>
-                {/* {
-                        pokemonID?.stats.map(stat =>(
-                          <li key={stat.name}>
-                           <span>{stat.stat.name}</span> <span>{stat.base_stat}</span>
-                           </li>
-                        ))
-                      } */}
+            
                 </div>
               
               
               </div>
-                {/* <div className="IDpokeGames">
-                  {
-                    pokemonID?.game_indices.map(game =>(
-                      <li> {game.version.name}</li>
-                    ))
-                  }
-                </div> */}
+          
             
           </div>
         </div>

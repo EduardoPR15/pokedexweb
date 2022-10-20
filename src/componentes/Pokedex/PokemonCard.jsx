@@ -35,7 +35,7 @@ const moveTo = () =>{
   setPruebaPoke('ola')
   navigate(`/pokedex/${pokemon.id}`)
 }
-console.log(pruebaPoke);
+//console.log(pruebaPoke);
   return (
     <div onClick={moveTo} className="principal">
         <div className="bgcard">
@@ -51,8 +51,8 @@ console.log(pruebaPoke);
                     <div className="pokeInfo">
                       {
                         pokemon?.types.map(type => (
-                          <div className="divname">
-                          <li key={type.slot}>{type.type.name}</li>
+                          <div key={type.slot} className="divname">
+                          <li >{type.type.name}</li>
                           </div>
                         ))
                       }

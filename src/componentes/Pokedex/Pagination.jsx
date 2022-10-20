@@ -23,7 +23,7 @@ const limitPage = blockLength === currentBlock ? pokemonLength : currentBlock * 
     const handleFocus = currentPage =>{
        setPage(currentPage)
     }
-console.log(pokemonLength);
+//console.log(pokemonLength);
     function arrowBtn(numberp, pokemonLength) {
         if (numberp === 1 ) {
             let ArrowBtn = 'ArrowNone'
@@ -40,8 +40,8 @@ console.log(pokemonLength);
     }
 const btnArrow = arrowBtn(page, pokemonLength)
 const btnArrow1 = arrowBtn1(page, pokemonLength)
-console.log(btnArrow);
-console.log(btnArrow1)
+//console.log(btnArrow);
+//console.log(btnArrow1)
 
     return (
     <div className='Pagination'>

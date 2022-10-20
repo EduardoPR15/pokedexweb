@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const InputSearch = () => {
+const InputSearch = ({setUseID}) => {
 
 const navigate = useNavigate()
 
@@ -10,6 +10,7 @@ const navigate = useNavigate()
 const submit = e => {
     e.preventDefault()
 console.log(e.target.search.value)
+setUseID(e.target.search.value.trim().toLowerCase())
 navigate(`/pokedex/${e.target.search.value.trim().toLowerCase()}`)
 //navigate(`/pokedex`)
 }

@@ -15,7 +15,7 @@ const [URLtype, setURLtype] = useState('All')
 const [pruebaPoke, setPruebaPoke] = useState('1')
 const userName = useSelector(state => state.userName)
 const trainerImgage = `/Trainers/${userStyle}.png`
-console.log(pruebaPoke)
+//console.log(pruebaPoke)
 
 const limit4 = 4
 const limit8 = 8
@@ -50,13 +50,13 @@ axios.get(URLtype)
 }, [URLtype])
 
 //console.log(pokemon)
-console.log(URLtype)
+//console.log(URLtype)
 
 const pokeNumb = btn =>{
 setPokePage(btn.target.id)
 console.log(btn.target.id);
 }
-console.log(page)
+//console.log(page)
   return (
     <div className='PokedexContainer'>
       <article> 

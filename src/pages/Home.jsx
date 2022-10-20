@@ -27,7 +27,7 @@ const handleClickHome = e =>{
   
   e.preventDefault()
   dispatch (setUserName(e.target.name.value.trim()))
-  console.log(e.target.name.value)
+  //console.log(e.target.name.value)
   //console.log('play');
   navigate('/pokedex')
 
@@ -84,7 +84,8 @@ if (profe === 8) {
 }
 
 const profdatas =[(profesorPokemon(profe))]
-console.log(profdatas[0][0]);
+//console.log(profdatas[0][0]);
+
   return (
     <div>
       <div className="trainergender">

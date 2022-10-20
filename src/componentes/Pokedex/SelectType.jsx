@@ -14,11 +14,11 @@ const SelectType = ({setURLtype, setPage}) => {
     }, [])
     
 
-const change = e =>{
-    setURLtype(e.target.value);
-    console.log(e.target.name);
+// const change = e =>{
+//     setURLtype(e.target.value);
+//     console.log(e.target.name);
 
-}
+// }
 const handleClick = es =>{
   //setURLtype(e.target.value)
   setURLtype(es.target.value);
@@ -31,8 +31,8 @@ const showList = lis =>{
   setList('onList')
 //console.log(list);
 } 
-console.log(list)
-console.log(selectedType); 
+//console.log(list)
+//console.log(selectedType); 
   return (
     <div className='selectType' >
       <option onClick={handleClick} value="All">ALL</option> <span onClick={showList} className='btnlist'> <i className='bx bx-menu' ></i></span>
