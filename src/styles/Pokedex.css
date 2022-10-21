@@ -418,8 +418,8 @@ margin: auto;
     .searchDiv button{
         display: flex;
         margin: auto;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 90px;
     }
     .selectType{
         position: absolute;
